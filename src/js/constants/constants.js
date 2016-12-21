@@ -25,3 +25,10 @@ export const commentsInitialState = {
   error: null,
   maxComments: 500
 };
+
+export const albumsInitialState = {
+  albums: [],
+  fetching: false,
+  fetched: false,
+  error: null
+}

@@ -1,4 +1,4 @@
-import {commentsInitialState} from '../constants/constants.js';
+import {commentsInitialState} from '../constants/constants';
 
 export default function reducer(state = commentsInitialState, action) {
   switch (action.type) {

@@ -1,4 +1,4 @@
-import {postsInitialState} from '../constants/constants.js';
+import {postsInitialState} from '../constants/constants';
 
 export default function reducer(state = postsInitialState, action) {
   switch (action.type) {

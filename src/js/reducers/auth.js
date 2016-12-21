@@ -1,4 +1,4 @@
-import {authInitialState} from '../constants/constants.js';
+import {authInitialState} from '../constants/constants';
 
 export default function reducer(state = authInitialState, action) {
   switch(action.type) {

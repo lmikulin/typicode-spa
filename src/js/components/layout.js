@@ -8,7 +8,8 @@ import {Link} from "react-router";
     user: store.auth.user,
     auth: store.auth.auth,
     posts: store.posts.posts,
-    comments: store.comments.comments
+    comments: store.comments.comments,
+    albums: store.albums.albums
   };
 })
 export default class Layout extends React.Component {
