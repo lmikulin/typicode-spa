@@ -14,6 +14,26 @@ export default function reducer(state = albumsInitialState, action) {
         return {...state, albums: albums};
       }
       return state;
+    case "USERS_LIST_FULFILLED":
+      let users = {};
+      let albums = [];
+      let foundUser;
+      state.albums.forEach((album) => {
+        let newAlbum;
+        if (users[album.userId]) {
+          newAlbum = {...album, userName: users[album.userId].name};
+        } else {
+          foundUser = action.payload.find((user) => user.id == album.userId);
+          if (foundUser) {
+            // add it to the users hash for quick reference on the next iteration
+            users[foundUser.id] = foundUser;
+            // create our new album entry
+            newAlbum = {...album, userName: foundUser.name};
+          }
+        }
+        albums.push(newAlbum || album);
+      });
+      return {...state, albums: albums};
   }
   return state;
 }

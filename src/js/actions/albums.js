@@ -14,18 +14,13 @@ export function getAlbums() {
             });
             // dont throw an error here, no thumb then just show placeholder
         });
+      })
+      .then(() => {
         axios.get("https://jsonplaceholder.typicode.com/users")
           .then((usersResp) => {
-            let index = 0;
-            const users = usersResp.data;
-            // response.data.forEach((album, index) => {
-            //   while (index < users.length) {
-            //    if (album.userId == users[index]) {
-            //      dispatch({type: "USER_NAME_FULFILLED", payload:})
-            //    }
-            //   }
-            // })
-          });
+            dispatch({type: "USERS_LIST_FULFILLED", payload: usersResp.data});
+          })
+          // again, no error, quietly missing user name
       })
       .catch((err) => {
         dispatch({type: "FETCH_ALBUMS_RJECTED", payload: err});

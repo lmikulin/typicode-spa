@@ -14,7 +14,7 @@ export default class Albums extends React.Component {
               <img src={album.thumb || "http://placehold.it/150x150"} />
               <figcaption>
                 <label>{album.title}</label><br/>
-                by {album.user || "..."}
+                by {album.userName || "..."}
               </figcaption>
             </div>
           )
