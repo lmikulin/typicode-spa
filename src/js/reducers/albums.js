@@ -3,9 +3,9 @@ import {albumsInitialState} from '../constants/constants';
 export default function reducer(state = albumsInitialState, action) {
   switch (action.type) {
     case "FETCH_ALBUMS_FULFILLED":
-      return {...state, fetching: false, albums: action.payload};
+      return {...state, albums: action.payload};
     case "FETCH_ALBUMS_RJECTED":
-      return {...state, fetching: false, error: action.payload};
+      return {...state, error: action.payload};
     case "ALBUM_THUMB_FULFILLED":
       const index = state.albums.findIndex((album) => album.id == action.payload.albumId);
       if (index >=0) {

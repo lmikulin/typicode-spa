@@ -9,7 +9,10 @@ import {Link} from "react-router";
     auth: store.auth.auth,
     posts: store.posts.posts,
     comments: store.comments.comments,
-    albums: store.albums.albums
+    albums: store.albums.albums,
+    photos: store.photos.photos,
+    photosUser: store.photos.user,
+    photosAlbum: store.photos.album
   };
 })
 export default class Layout extends React.Component {

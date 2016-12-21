@@ -5,30 +5,30 @@ export const authInitialState = {
     email: null,
     id: null
   },
-  fetching: false,
   auth: false,
   error: null
 };
 
 export const postsInitialState = {
   posts: [],
-  fetching: false,
-  fetched: false,
   error: null,
   maxPostId: 100
 };
 
 export const commentsInitialState = {
   comments: {},
-  fetching: false,
-  fetched: false,
   error: null,
   maxComments: 500
 };
 
 export const albumsInitialState = {
   albums: [],
-  fetching: false,
-  fetched: false,
   error: null
-}
+};
+
+export const photosInitialState = {
+  photos: [],
+  album: null,
+  user: null,
+  error: null
+};

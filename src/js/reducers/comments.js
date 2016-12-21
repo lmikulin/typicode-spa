@@ -2,12 +2,10 @@ import {commentsInitialState} from '../constants/constants';
 
 export default function reducer(state = commentsInitialState, action) {
   switch (action.type) {
-    case "FETCH_COMMENTS":
-      return {...state, fetching: true};
     case "FETCH_COMMENTS_FULFILLED":
-      return {...state, fetching: false, fetched: true, comments: Object.assign({}, state.comments, action.payload)}
+      return {...state, comments: Object.assign({}, state.comments, action.payload)}
     case "FETCH_COMMENTS_REJECTED":
-      return {...state, fetching: false, fetched: true, error: action.payload}
+      return {...state, error: action.payload}
     case "ADD_NEW_COMMENT":
       const maxComments = state.maxComments + 1;
       const newCommentsForPost = [action.payload, ...state.comments[action.payload.postId]];

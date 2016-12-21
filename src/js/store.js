@@ -8,12 +8,14 @@ import {syncHistoryWithStore} from 'react-router-redux';
 import {browserHistory} from 'react-router';
 
 import reducer from "./reducers";
-import {authInitialState, postsInitialState, commentsInitialState} from "./constants/constants.js";
+import {authInitialState, postsInitialState, commentsInitialState, albumsInitialState, photosInitialState} from "./constants/constants.js";
 
 const defaultState = {
   auth: authInitialState,
   posts: postsInitialState,
-  comments: commentsInitialState
+  comments: commentsInitialState,
+  albums: albumsInitialState,
+  photos: photosInitialState
 }
 
 const middleware = applyMiddleware(promise(), thunk, logger());
