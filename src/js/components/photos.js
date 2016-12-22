@@ -13,7 +13,7 @@ export default class Photos extends React.Component {
         <p>{this.props.photosUser}</p>
         {this.props.photos.map((photo, index) => {
           return (
-            <Link to="detail/5" key={index}>
+            <Link to={`detail/${index}`} key={index}>
               <img src={photo.thumbnailUrl}/>
               <figcaption>
                 <label>{photo.title}</label>

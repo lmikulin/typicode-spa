@@ -20,7 +20,7 @@ const routedApp = (
         <Route path="posts" component={Posts}></Route>
         <Route path="albums" component={Albums}></Route>
         <Route path="photos/:albumId" component={Photos}></Route>
-        <Route path="detail/:photoId" component={Detail}></Route>
+        <Route path="detail/:photoIndex" component={Detail}></Route>
       </Route>
     </Router>
   </Provider>
